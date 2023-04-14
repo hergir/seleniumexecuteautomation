@@ -1,26 +1,33 @@
-package com.ea.SpringStart;
+package com.hg.prenotami;
 
-import com.ea.SpringStart.pages.HomePage;
-import com.ea.SpringStart.pages.LoginPage;
+import com.hg.prenotami.pages.UserAreaPage;
+import com.hg.prenotami.pages.LoginPage;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Profile;
 
 import java.util.List;
+
+import static com.hg.prenotami.pages.BasePage.WAITING_TIME;
 
 @SpringBootTest(classes = SpringStartApplication.class)
 @Profile("second")
 class SpringStartApplicationTests {
 
 	@Autowired
-	private HomePage homePage;
+	private LoginPage loginPage;
+
 
 	@Value("${app.url}")
 	private String appUrl;
+
+	@Value("${login.mail}")
+	private String loginMail;
+
+	@Value("${login.pwd}")
+	private String loginPwd;
 
 	@Value("chrome,firefox,edge")
 	private List<String> browsers;
@@ -29,12 +36,12 @@ class SpringStartApplicationTests {
 	private String environment;
 
 	@Test
-	void contextLoads1() {
+	void justLoginTest() throws Exception {
 		System.out.println(appUrl);
-//		homePage.Navigate(appUrl);
-//		homePage.ClickLogin();
-//		loginPage.Login("admin", "password");
-//		loginPage.ClickLogin();
+		loginPage.Navigate(appUrl);
+		loginPage.Login(loginMail, loginPwd);
+		UserAreaPage homePage = loginPage.ClickLogin();
+		homePage.sayHello();
 	}
 
 	@Test

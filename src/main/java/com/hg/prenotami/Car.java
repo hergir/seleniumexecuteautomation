@@ -1,4 +1,4 @@
-package com.ea.SpringStart;
+package com.hg.prenotami;
 
 import org.springframework.stereotype.Component;
 
@@ -7,7 +7,7 @@ public class Car {
 
 
     public Car() {
-        System.out.println("com.ea.SpringStart.Car instantiated");
+        System.out.println("Car instantiated");
     }
 
     public void getCar() {

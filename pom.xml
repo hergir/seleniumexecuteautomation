@@ -8,11 +8,10 @@
 		<version>2.4.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ea</groupId>
-	<artifactId>SpringStart</artifactId>
+	<groupId>com.hg</groupId>
+	<artifactId>prenotami</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringStart</name>
-	<description>Demo project for Spring Boot</description>
+	<name>Prenot@mi</name>
 	<properties>
 		<java.version>11</java.version>
 		<selenium.version>3.141.59</selenium.version>
@@ -56,7 +55,7 @@
 			<version>${testcontainers.version}</version>
 			<scope>test</scope>
 		</dependency>
-				<dependency>
+		<dependency>
 			<groupId>org.testcontainers</groupId>
 			<artifactId>junit-jupiter</artifactId>
 			<version>${testcontainers.version}</version>
@@ -83,7 +82,7 @@
 				<version>2.20</version>
 				<configuration>
 					<includes>
-						<include>com.ea.SpringStart.SpringStartApplication</include>
+						<include>com.hg.prenotami.SpringStartApplication</include>
 					</includes>
 				</configuration>
 			</plugin>
