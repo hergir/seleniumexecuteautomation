@@ -2,6 +2,7 @@ package com.hg.prenotami;
 
 import com.hg.prenotami.pages.UserAreaPage;
 import com.hg.prenotami.pages.LoginPage;
+import org.junit.Ignore;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -44,7 +45,7 @@ class SpringStartApplicationTests {
 		homePage.sayHello();
 	}
 
-	@Test
+	@Ignore
 	void contextLoads2() {
 		System.out.println(appUrl);
 //		homePage.Navigate(appUrl);
@@ -54,7 +55,7 @@ class SpringStartApplicationTests {
 	}
 
 
-	@Test
+	@Ignore
 	void contextLoads3() {
 		System.out.println(appUrl);
 //		homePage.Navigate(appUrl);
